@@ -7,7 +7,7 @@ export default function Home({username,}) {
     axios.defaults.withCredentials = true;
     
     const handleLogOut = () => {
-        axios.post(`https://session-management-api.vercel.app/api/users/logout`)
+        axios.post(`https://session-api-tau.vercel.app/api/users/logout`)
         .then((response) => {
             console.log(response);
             setUser(null);
