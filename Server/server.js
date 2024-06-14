@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://session-management-in-express.vercel.app/"],
+    origin: ["https://session-management-in-express.vercel.app"],
     methods: ['GET', 'POST'],
     credentials: true,
 }));
@@ -28,7 +28,7 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-    res.send(req.session.user || "hello world");
+    res.send("Home");
 })
 
 // Register route
