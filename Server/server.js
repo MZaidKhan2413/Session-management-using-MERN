@@ -28,7 +28,7 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-    res.send("Home");
+    res.json("Home");
 })
 
 // Register route
