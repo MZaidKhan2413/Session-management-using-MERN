@@ -11,7 +11,7 @@ function App() {
 
   useEffect(()=>{
     axios.defaults.withCredentials = true;
-    axios.get(`${apiLink}/api/users`)
+    axios.get(`${apiLink}api/users`)
    .then((response) => {
     setUser(response.data)
    })

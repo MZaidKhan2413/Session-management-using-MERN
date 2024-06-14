@@ -20,7 +20,7 @@ export default function Register() {
   axios.defaults.withCredentials = true;
   const handleOnSubmit = (e) => {
     e.preventDefault(); 
-    axios.post(`${apiLink}/api/users/register`, formValues)
+    axios.post(`${apiLink}api/users/register`, formValues)
     .then((response) => {
       console.log(response);
       setUser(response.data.data);
