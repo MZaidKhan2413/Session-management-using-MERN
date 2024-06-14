@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:5173',],
+    origin: ["https://session-management-in-express.vercel.app/"],
     methods: ['GET', 'POST'],
     credentials: true,
 }));
@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     cookie: { 
-        secure: false,
+        secure: true,
         maxAge: 3600000 * 24 * 30,
         httpOnly: true,
      },
