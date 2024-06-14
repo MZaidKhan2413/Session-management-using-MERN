@@ -19,7 +19,7 @@ export default function Register() {
   axios.defaults.withCredentials = true;
   const handleOnSubmit = (e) => {
     e.preventDefault(); 
-    axios.post(`https://session-api-tau.vercel.app/api/users/register`, formValues)
+    axios.post(`https://session-api-xi.vercel.app/api/users/register`, formValues)
     .then((response) => {
       console.log(response);
       setUser(response.data.data);

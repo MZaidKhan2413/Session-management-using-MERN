@@ -10,7 +10,7 @@ function App() {
 
   useEffect(()=>{
     axios.defaults.withCredentials = true;
-    axios.get(`https://session-api-tau.vercel.app/api/users`)
+    axios.get(`https://session-api-xi.vercel.app/api/users`)
    .then((response) => {
     setUser(response.data)
    })
