@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import "./Register.css";
 import axios from "axios";
 import  {UserContext}  from "../../UserContext";
-const apiLink = import.meta.env.VITE_API_LINK;
 
 export default function Register() {
   const {setUser} = useContext(UserContext);
@@ -20,7 +19,7 @@ export default function Register() {
   axios.defaults.withCredentials = true;
   const handleOnSubmit = (e) => {
     e.preventDefault(); 
-    axios.post(`${apiLink}api/users/register`, formValues)
+    axios.post(`https://session-management-api.vercel.app/api/users/register`, formValues)
     .then((response) => {
       console.log(response);
       setUser(response.data.data);

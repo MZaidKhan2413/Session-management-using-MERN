@@ -1,14 +1,13 @@
 import axios from "axios";
 import { UserContext } from "../../UserContext";
 import { useContext } from "react";
-const apiLink = import.meta.env.VITE_API_LINK;
 
 export default function Home({username,}) {
     const { user, setUser } = useContext(UserContext);
     axios.defaults.withCredentials = true;
     
     const handleLogOut = () => {
-        axios.post(`${apiLink}api/users/logout`)
+        axios.post(`https://session-management-api.vercel.app/api/users/logout`)
         .then((response) => {
             console.log(response);
             setUser(null);
