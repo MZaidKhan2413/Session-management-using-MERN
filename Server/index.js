@@ -7,6 +7,8 @@ import bodyParser from 'body-parser';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.enable('trust proxy');
+
 app.use(express.json());
 app.use(cors({
     origin: ["https://session-management-in-express.vercel.app"],
@@ -21,6 +23,7 @@ app.use(session({
         secure: true,
         maxAge: 3600000 * 24 * 30,
         httpOnly: true,
+        sameSite: 'none',
      },
     secret: 'secretkeydsfsdf',
     resave: false,
