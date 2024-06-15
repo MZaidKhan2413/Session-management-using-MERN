@@ -27,7 +27,7 @@ app.use(session({
      },
     secret: 'secretkeydsfsdf',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
 }));
 
 app.get('/', (req, res) => {
