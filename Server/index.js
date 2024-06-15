@@ -7,7 +7,7 @@ import bodyParser from 'body-parser';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.enable('trust proxy');
+app.enable('trust proxy', 1);
 
 app.use(express.json());
 app.use(cors({
